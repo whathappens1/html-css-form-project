@@ -1,6 +1,6 @@
 // Initialize EmailJS
 (function() {
-    emailjs.init("");
+    emailjs.init("FrrU_28Vc1N-7FgZb");
 })();
 
 // Form elements
@@ -33,8 +33,8 @@ form.addEventListener('submit', async function(e) {
     try {
         // Send email
         await emailjs.send(
-            "",
-            "",
+            "service_3n8a76e",
+            "template_xk9uhfg",
             templateParams
         );
 
