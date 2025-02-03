@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج الاتصال</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=GFS+Didot&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-gray-50">
+    <main class="flex relative min-h-screen flex-col justify-center mx-auto mt-16 py-24 sm:px-12 px-4">
+        <div
+            class="contact-form z-20 bg-white/20 backdrop-blur-md w-full px-8 py-16 rounded-xl max-w-screen-sm mx-auto border fade-in">
+            <div class="slide-up">
+                <div class="text-center mb-[3vh]">
+
+                    <div class="space-y-3">
+                        <p class="text-base font-semibold text-blue-700">تواصل معنا</p>
+                        <h1 class="!leading-normal font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                            إبقى على تواصل</h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slide-up-delay">
+                <form id="contactForm" class="mt-5 mx-auto w-full space-y-3">
+                    <input type="text" id="name" placeholder="أدخل الاسم الكريم" required
+                        class="flex h-9 w-full text-right  bg-[#fafafa] rounded-md border border-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50" />
+
+                    <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required
+                        class="flex h-9 w-full text-right  bg-[#fafafa] rounded-md border border-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50" />
+
+
+                    <textarea id="message" placeholder="أكتب رسالتك هنا" required dir="rtl"
+                        class="flex min-h-[80px] w-full rounded-md border border-input bg-[#fafafa] px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"></textarea>
+
+                    <button type="submit" id="submitButton"
+                        class="w-full  inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-9 px-4 py-2">
+                        <span>إرسال</span>
+                        <div id="loadingSpinner" class="hidden mr-2">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+
+                </form>
+            </div>
+
+            <div class="slide-up-delay mt-3">
+
+                <p class="text-base font-thin opacity-70 text-center">أو</p>
+            <a href="http://">
+                <button
+                class="w-full mt-3 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
+                <span>للإطلاع على الكود</span>
+
+            </button>
+            </a>
+                <div class="text-start flex items-center justify-start gap-2 mt-[1vh]">
+
+                    <p class="text-base font-semibold">عمل الطالب: <span class="text-blue-700">تميم بن إبراهيم بن سعد
+                            السهلي</span>, </p>
+                    <p class="text-base font-semibold">الشعبة: <span class="text-blue-700">107</span></p>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </main>
+
+    <div id="toast"
+        class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg opacity-0 transition-opacity duration-300">
+        تم الإرسال بنجاح!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
