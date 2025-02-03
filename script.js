@@ -1,6 +1,6 @@
 // Initialize EmailJS
 (function() {
-    emailjs.init();
+    emailjs.init("FrrU_28Vc1N-7FgZb");
 })();
 
 // Form elements
@@ -26,15 +26,15 @@ form.addEventListener('submit', async function(e) {
     const templateParams = {
         from_name: name,
         from_email: email,
-        to_name: "Contact Messages",
+        to_name: "Taysira Contact Messages",
         message: message,
     };
 
     try {
         // Send email
         await emailjs.send(
-            "",
-            "",
+            "service_3n8a76e",
+            "template_xk9uhfg",
             templateParams
         );
 
